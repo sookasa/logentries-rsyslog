@@ -1,0 +1,14 @@
+$template LogentriesFormat,"<%= node['logentries']['token'] %> %HOSTNAME% %syslogtag%%msg%\n"
+
+<%- if node['logentries']['enable_tls'] -%>
+$DefaultNetstreamDriverCAFile /etc/syslog.logentries.crt # trust these CAs
+$ActionSendStreamDriver gtls # use gtls netstream driver
+$ActionSendStreamDriverMode 1 # require TLS
+$ActionSendStreamDriverAuthMode x509/name # authenticate by hostname
+<% end %>
+$ActionResumeRetryCount <%= node['logentries']['resume_retry_count'] %>
+$ActionQueueType LinkedList # use asynchronous processing
+$ActionQueueFileName /var/log/rsyslog_queue_main # set file name, also enables disk mode
+$ActionQueueSaveOnShutdown on
+$ActionQueueMaxDiskSpace <%= node['logentries']['queue_disk_space'] %>
+<%= node['logentries']['syslog_selector'] %>     @@api.logentries.com:<%= node['logentries']['port'] %>;LogentriesFormat
