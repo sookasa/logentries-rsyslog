@@ -5,6 +5,9 @@ The default cookbook sets up Rsyslogd to send all syslog entries to Logentries v
 The cookbook also provides the "logentries_pipe" resource, which sets up Rsyslogd to
 tail and stream the given log file into Logentries (see below for usage).
 
+> NOTE: While it is functional, this cookbook is no longer being actively worked on.
+If you're interested in taking over, please do get in touch!
+
 
 Requirements
 ============
