@@ -19,7 +19,7 @@ action :create do
       :severity => new_resource.severity
     )
 
-    notifies :restart, resources(:service => "rsyslog"), :delayed
+    notifies :restart, "service[rsyslog]", :delayed
   end
 
   new_resource.updated_by_last_action(true)
