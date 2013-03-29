@@ -47,7 +47,7 @@ end
 desc "Run spec suite"
 RSpec::Core::RakeTask.new(:spec, :create_sandbox) do |t|
   t.pattern = %w(spec)
-  rspec_opts = ['--color', '--fail-fast']
+  rspec_opts = ['--color', '--fail-fast', '--format documentation']
   t.rspec_opts = rspec_opts
 end
 
