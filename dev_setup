@@ -1,2 +1,2 @@
-bundle install --path vendor --binstubs
-bin/berks install --path vendor/cookbooks
+bundle install
+bundle exec berks install
