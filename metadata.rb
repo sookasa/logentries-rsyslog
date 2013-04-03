@@ -6,7 +6,7 @@ description      "Installs/Configures Logentries for Rsyslog"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.1.0"
 
-depends "rsyslog"
+depends "rsyslog", "~> 1.5.0"
 
 attribute "logentries/syslog_selector",
   :display_name => "Syslog Selector",
