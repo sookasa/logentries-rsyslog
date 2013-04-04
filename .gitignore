@@ -4,4 +4,5 @@ bin
 cookbook_test
 metadata.json
 .vagrant
-vendor
+vendor.kitchen/
+.kitchen
