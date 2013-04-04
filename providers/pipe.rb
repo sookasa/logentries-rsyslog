@@ -28,7 +28,7 @@ end
 
 action :delete do
   config_name = File.basename(new_resource.file, '.log')
-  tail_file = "/etc/rsyslog.d/150-#{config_name}"
+  tail_file = "/etc/rsyslog.d/150-#{config_name}.conf"
 
   file tail_file do
     action :delete
