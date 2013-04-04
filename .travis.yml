@@ -3,4 +3,5 @@ gemfile:
 language: ruby
 rvm:
   - 1.9.3
+bundler_args: --without integration
 script: bundle exec rake test
