@@ -38,5 +38,8 @@ end
 template "/etc/rsyslog.d/10-logentries.conf" do
   source "rsyslog-main.erb"
   mode "0644"
+  variables(
+    :port => node['logentries']['enable_tls'] ? 20000 : 10000
+  )
   notifies :restart, "service[rsyslog]"
 end

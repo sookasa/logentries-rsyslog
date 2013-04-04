@@ -12,4 +12,4 @@ $ActionQueueType LinkedList
 $ActionQueueFileName /var/log/rsyslog_queue_main
 $ActionQueueSaveOnShutdown on
 $ActionQueueMaxDiskSpace <%= node['logentries']['queue_disk_space'] %>
-<%= node['logentries']['syslog_selector'] %>     @@api.logentries.com:<%= node['logentries']['port'] %>;LogentriesFormat
+<%= node['logentries']['syslog_selector'] %>     @@api.logentries.com:<%= @port %>;LogentriesFormat
