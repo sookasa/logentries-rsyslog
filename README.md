@@ -1,4 +1,4 @@
-Description
+Description [![Build Status](https://travis-ci.org/hipsnip/logentries-rsyslog.png)](https://travis-ci.org/hipsnip/logentries-rsyslog)
 ===========
 A simple cookbook for setting up a server to stream logs into Logentries, using Rsyslogd.
 The default cookbook sets up Rsyslogd to send all syslog entries to Logentries via a Token-based input.
