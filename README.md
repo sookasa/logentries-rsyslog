@@ -41,11 +41,15 @@ First, you'll need [RVM](https://rvm.io/) installed. If you don't want to use RV
 then just make sure you use the Ruby version specified in `.rvmrc`. If you want to
 run the integration tests, you'll need to have [Vagrant](http://www.vagrantup.com/) (> 1.1.0).
 
-To get the dependencies:
+To get the main dependencies:
 
     gem install bundler (if you don't have it)
     bundle install
     bundle exec berks install
+    
+plus if you have Vagrant:
+
+    vagrant plugin install berkshelf-vagrant
 
 To run the "offline" syntax checks and unit tests (this is what's run in Travis):
 
