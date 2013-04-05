@@ -30,6 +30,10 @@ First, make sure you set the ['logentries']['token'] attribute in your Role/Envi
 to the token created in Logentries for your input. Then include the "logentries::default"
 recipe in you run list to start streaming all syslog entries to Logentries.
 
+### Tailing log files
+This functionality is currently not available, but will be provided via the Opscode Rsyslog cookbook
+(included as a dependency), where there is an open pull request for it at the time of this writing.
+
 
 Development
 ============
