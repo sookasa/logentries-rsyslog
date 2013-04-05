@@ -38,7 +38,8 @@ This functionality is currently not available, but will be provided via the Opsc
 Development
 ============
 First, you'll need [RVM](https://rvm.io/) installed. If you don't want to use RVM,
-then just make sure you use the Ruby version specified in `.rvmrc`.
+then just make sure you use the Ruby version specified in `.rvmrc`. If you want to
+run the integration tests, you'll need to have [Vagrant](http://www.vagrantup.com/) (> 1.1.0).
 
 To get the dependencies:
 
