@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: logentries
+# Cookbook Name:: logentries-rsyslog
 # Recipe:: default
 #
-# Copyright 2012, HipSnip Ltd.
+# Copyright 2013, HipSnip Ltd.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
