@@ -14,20 +14,17 @@ Built to run on systems with Rsyslog installed, tested on Ubuntu 12.04.
 
 Attributes
 ==========
-* logentries/syslog_selector
-    * The syslog tags and types to stream into Logentries (defaults to "*.*")
-* logentries/resume_retry_count
-    * The number of times to retry the sending of failed messages (defaults to unlimited)
-* logentries/queue_disk_space
-	* The maximum disk space allowed for queues (default to 100M)
-* logentries/enable_tls
-	* Whether to encrypt all log traffic going into Logentries (default to True). Automatically switches from UDP to TCP as well.
+
+    ['logentries']['syslog_selector'] = The syslog tags and types to stream into Logentries (defaults to "*.*")
+    ['logentries']['resume_retry_count'] = The number of times to retry the sending of failed messages (defaults to unlimited)
+    ['logentries']['queue_disk_space'] = The maximum disk space allowed for queues (default to 100M)
+    ['logentries']['enable_tls'] = Whether to encrypt all log traffic going into Logentries (default to True). Automatically switches from UDP to TCP as well.
 
 
 Usage
 =====
-First, make sure you set the ['logentries']['token'] attribute in your Role/Environment
-to the token created in Logentries for your input. Then include the "logentries::default"
+First, make sure you set the `['logentries']['token']` attribute in your Role/Environment
+to the token created in Logentries for your input. Then include the `logentries::default`
 recipe in you run list to start streaming all syslog entries to Logentries.
 
 ### Tailing log files
@@ -46,7 +43,7 @@ To get the main dependencies:
     gem install bundler (if you don't have it)
     bundle install
     bundle exec berks install
-    
+
 plus if you have Vagrant:
 
     vagrant plugin install berkshelf-vagrant
