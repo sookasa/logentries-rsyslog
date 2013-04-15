@@ -34,27 +34,7 @@ This functionality is currently not available, but will be provided via the Opsc
 
 Development
 ============
-First, you'll need [RVM](https://rvm.io/) installed. If you don't want to use RVM,
-then just make sure you use the Ruby version specified in `.rvmrc`. If you want to
-run the integration tests, you'll need to have [Vagrant](http://www.vagrantup.com/) (> 1.1.0).
-
-To get the main dependencies:
-
-    gem install bundler (if you don't have it)
-    bundle install
-    bundle exec berks install
-
-plus if you have Vagrant:
-
-    vagrant plugin install berkshelf-vagrant
-
-To run the "offline" syntax checks and unit tests (this is what's run in Travis):
-
-    bundle exec rake test
-
-To run the full test suite, including the integration tests via Test Kitchen (this can take a while):
-
-    bundle exec rake full_test
+Please refer to our wiki page [here](https://github.com/hipsnip/cookbook-development/wiki/Developing-and-Testing)
 
 
 License and Author
