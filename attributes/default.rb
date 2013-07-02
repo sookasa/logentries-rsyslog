@@ -22,3 +22,4 @@ default['logentries']['syslog_selector'] = '*.*'
 default['logentries']['queue_disk_space'] = '100M'
 
 default['logentries']['enable_tls'] = true
+default['logentries']['syslog_format'] = '%HOSTNAME% %syslogtag%%msg%'
